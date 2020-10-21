@@ -1,11 +1,14 @@
 language: python
 python:
   - "3.8"
+services:
+  - postgresql
 install:
   - pip install -r requirements.txt
-# Run tests
+before_script:
+  - psql -c "create user ikea with password 'ikea';" -U postgres
+  - psql -c "grant all privileges on database ikea to ikea;" -U postgres
+  - psql -c "create database ikea;"
 script:
-  # Unit Tests
   - cd src/ && flask db drop && flask db create && python -m unittest tests/client.py
-  # Linting Tests
   - flake8 .
