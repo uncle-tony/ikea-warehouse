@@ -7,3 +7,5 @@ pyenv.cfg
 lib64
 # pycache
 **/__pycache__/
+# swap files vim
+*.swp
