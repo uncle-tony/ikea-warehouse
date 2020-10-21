@@ -6,6 +6,6 @@ install:
 # Run tests
 script:
   # Unit Tests
-  - python -m unittest tests/client.py
+  - cd src/ && python -m unittest tests/client.py
   # Linting Tests
-  - flake
+  - flake8 .
