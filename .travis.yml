@@ -6,9 +6,9 @@ services:
 install:
   - pip install -r requirements.txt
 before_script:
+  - psql -c "create database ikea;"
   - psql -c "create user ikea with password 'ikea';" -U postgres
   - psql -c "grant all privileges on database ikea to ikea;" -U postgres
-  - psql -c "create database ikea;"
 script:
   - cd src/ && flask db drop && flask db create && python -m unittest tests/client.py
   - flake8 .
