@@ -7,7 +7,7 @@ class TestClient(BaseCase):
     def test_client_v1(self):
         """ Check endpoint availability """
         f = FileStorage (
-            stream = open(os.path.join("../data/inventory.json"), 'rb'),
+            stream = open(os.path.join("tests/data/inventory.json"), 'rb'),
             filename = 'inventory.json',
             content_type = 'application/json'
         )
@@ -15,7 +15,7 @@ class TestClient(BaseCase):
             'file': f 
         }, content_type='multipart/form-data')
         f = FileStorage (
-            stream = open(os.path.join("../data/products.json"), 'rb'),
+            stream = open(os.path.join("tests/data/products.json"), 'rb'),
             filename = 'products.json',
             content_type = 'application/json'
         )
@@ -31,7 +31,7 @@ class TestClient(BaseCase):
     def test_client_v2(self):
         """ Check endpoint availability """
         f = FileStorage (
-            stream = open(os.path.join("../data/inventory.json"), 'rb'),
+            stream = open(os.path.join("tests/data/inventory.json"), 'rb'),
             filename = 'inventory.json',
             content_type = 'application/json'
         )
@@ -39,7 +39,7 @@ class TestClient(BaseCase):
             'file': f 
         }, content_type='multipart/form-data')
         f = FileStorage (
-            stream = open(os.path.join("../data/products.json"), 'rb'),
+            stream = open(os.path.join("tests/data/products.json"), 'rb'),
             filename = 'products.json',
             content_type = 'application/json'
         )

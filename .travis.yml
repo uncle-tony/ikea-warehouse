@@ -6,6 +6,6 @@ install:
 # Run tests
 script:
   # Unit Tests
-  - cd src/ && python -m unittest tests/client.py
+  - cd src/ && flask db drop && flask db create && python -m unittest tests/client.py
   # Linting Tests
   - flake8 .
