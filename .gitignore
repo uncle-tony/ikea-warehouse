@@ -1,0 +1,11 @@
+# venv directory structure
+lib/
+include/
+share/
+bin/
+pyenv.cfg
+lib64
+# pycache
+**/__pycache__/
+# data files
+data/
