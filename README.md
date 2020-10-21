@@ -1,4 +1,4 @@
-# ikea-warehouse
+# ikea-warehouse [![Build Status](https://travis-ci.com/uncle-tony/ikea-warehouse.svg?branch=main)](https://travis-ci.com/uncle-tony/ikea-warehouse)
 Ikea Warehouse is a Python Flask prototype with a some fun ideas.
 
 ## Requirements
